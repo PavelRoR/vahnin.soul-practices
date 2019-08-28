@@ -2,6 +2,15 @@
 //@prepros-prepend bootstrap.min.js
 // @prepros-prepend flipclock.min.js
 
+var isIE = false || !!document.documentMode;
+
+if (isIE) {
+    var head = document.getElementsByTagName("head")[0];
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "css/ie.min.css";
+    head.appendChild(link);
+}
 $(document).ready(function () {
     /* Якорь */
     $(function () {
@@ -111,7 +120,7 @@ $(document).ready(function () {
 
     /* Таймер */
     var clock;
-    var futureDate = new Date("August 22, 2019 00:00 AM UTC+3");
+    var futureDate = new Date("September 6, 2019 00:00 AM UTC+3");
     var currentDate = new Date();
     var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
@@ -125,7 +134,12 @@ $(document).ready(function () {
     }
     if (diff < 0) {
         diff = 0;
-
+        $('#sale-1').text('1 000р.');
+        $('#sale-2').text('2 000р.');
+        $('#today-1').text('3 900р.');
+        $('#today-2').text('11 900р.');
+        $('#link-1').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3756&clean=true&lg=ru');
+        $('#link-2').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3759&clean=true&lg=ru');
     }
     clock = $('.clock').FlipClock(diff, {
         clockFace: 'HourlyCounter',
@@ -133,7 +147,12 @@ $(document).ready(function () {
         language: 'ru',
         callbacks: {
             stop: function () {
-
+                $('#sale-1').text('1 000р.');
+                $('#sale-2').text('2 000р.');
+                $('#today-1').text('3 900р.');
+                $('#today-2').text('11 900р.');
+                $('#link-1').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3756&clean=true&lg=ru');
+                $('#link-2').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3759&clean=true&lg=ru');
             }
         },
     });
