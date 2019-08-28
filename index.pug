@@ -1,0 +1,28 @@
+-var head_url = 'https://vahnin.mastervision.su/soul-practics/';
+-var head_title = '«Душевные практики»';
+-var head_description = 'Записи онлайн-мастер-класса Светояра Вахнина';
+-var styles = 'css/styles.min.css';
+-var fav_ico = 'favicon.ico';
+-var fav_png = 'favicon.png';
+-var fb_content = '2030481470529055';
+-var oferta = 'oferta/oferta.doc';
+
+mixin gt(cl,h3)
+	h3.general-title(class= cl)= h3
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_fb_scripts
+	body
+		include pug/scripts/body_top_fb_scripts
+		include pug/main/1.main.pug
+		include pug/main/2.module-1.pug
+		include pug/main/3.module-2.pug
+		include pug/main/4.prices.pug
+		include pug/main/5.records.pug
+		include pug/main/6.footer.pug
+		include pug/scripts
+		//- include pug/scripts/callback
+		include pug/scripts/body_bottom_scripts

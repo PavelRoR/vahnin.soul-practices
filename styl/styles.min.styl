@@ -1,0 +1,143 @@
+OS = 'OpenSans', sans-serif
+GB = 'GilroyExtraBold', sans-serif;
+GL = 'GilroyLight', sans-serif;
+
+@font-face {
+	font-family: 'GilroyExtraBold';
+	src: url('../fonts/GilroyExtraBold.eot');
+	src: url('../fonts/GilroyExtraBold.eot') format('embedded-opentype'),
+		 url('../fonts/GilroyExtraBold.woff2') format('woff2'),
+		 url('../fonts/GilroyExtraBold.woff') format('woff'),
+		 url('../fonts/GilroyExtraBold.ttf') format('truetype'),
+		 url('../fonts/GilroyExtraBold.svg#GilroyExtraBold') format('svg');
+	font-display: fallback;
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GilroyLight';
+	src: url('../fonts/GilroyLight.eot');
+	src: url('../fonts/GilroyLight.eot') format('embedded-opentype'),
+		 url('../fonts/GilroyLight.woff2') format('woff2'),
+		 url('../fonts/GilroyLight.woff') format('woff'),
+		 url('../fonts/GilroyLight.ttf') format('truetype'),
+		 url('../fonts/GilroyLight.svg#GilroyLight') format('svg');
+	font-display: fallback;
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans.eot');
+	src: url('../fonts/OpenSans.eot') format('embedded-opentype'),
+		 url('../fonts/OpenSans.woff2') format('woff2'),
+		 url('../fonts/OpenSans.woff') format('woff'),
+		 url('../fonts/OpenSans.ttf') format('truetype'),
+		 url('../fonts/OpenSans.svg#OpenSans') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import '../css/_css/bootstrap.min.css'
+@import '../css/_css/flipclock.min.css'
+
+*
+	margin 0
+	padding 0
+	outline none
+body
+	font-family: OS
+	font-size: 18px
+	line-height: 1.3
+	color: #fff
+	background-color: #17252E
+a
+	color: #fefefe
+	&:focus
+		outline: 0
+	&:hover
+		text-decoration none
+h1,h2,h3,h4,h5,h6
+	font-weight normal
+	margin 0
+button
+	border none
+section
+header
+footer
+	width 100%
+	display block
+.video-wrapper
+	margin 0 auto
+	position relative
+	width 100%
+	&:before
+		content ''
+		height 0
+		padding-top 56.25%
+		display block
+	&:after
+		content: ''
+		display block
+		position: absolute
+		top: 0
+		left 0
+		right 0
+		width: 100%
+		height 70px
+	img,
+	iframe
+		position absolute
+		width 100%
+		height 100%
+		display block
+		background-color #000
+		border-radius 3px
+		border: 0
+		top 0
+		left 0
+		right 0
+		bottom 0
+		cursor pointer
+.general-title
+	text-align: center
+	margin-bottom: 40px
+	font-size: 32px
+	font-family: GB
+	color #edd327
+.button
+	display block
+	margin 0 auto
+	height 45px
+	line-height 41px
+	width 100%
+	max-width 280px
+	background-color: #FFE32A
+	text-align: center
+	color rgba(5,64,103, 1)
+	font-family: GB
+	border-radius: 30px
+	border: 2px solid #fff
+	text-decoration: none
+	text-transform: uppercase
+	transition: all .4s ease-in-out
+	box-shadow: 0 0 12px 6px rgba(255,255,255, .5)
+	&:focus
+		text-decoration: none
+		color #000
+	&:hover
+		text-decoration: none
+		color #FFE32A
+		letter-spacing: 1px
+		background-color: rgba(5,64,103, 1)
+		border-color: #FFE32A
+
+@import 'main/0.header'
+@import 'main/1.main'
+@import 'main/2.module-1'
+@import 'main/3.module-2'
+@import 'main/4.prices'
+@import 'main/5.records'
+@import 'main/6.footer'
+@import 'main/7.medias'
